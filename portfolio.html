@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Animated Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 400px;
+            margin: 30px auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fadeIn 1s forwards ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid lime;
+        }
+
+        h2 {
+            color: lime;
+            margin-top: 10px;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Social Media Colors */
+        .linkedin { background: #0077b5; color: white; }
+        .github   { background: #333; color: white; }
+        .instagram { background: #e4405f; color: white; }
+        .email    { background: #d44638; color: white; }
+
+        /* Skills Section */
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skill {
+            margin: 10px auto;
+            width: 80%;
+            text-align: left;
+        }
+
+        .skill-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background: lime;
+            width: 0;
+            border-radius: 5px;
+            animation: loadSkill 2s forwards;
+        }
+
+        @keyframes loadSkill {
+            to { width: var(--width); }
+        }
+
+        /* Projects Section */
+        .projects {
+            margin: 30px auto;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background: rgba(0, 255, 0, 0.2);
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <img src="https://assets.onecompiler.app/4325t725n/437zdt636/1000152229.jpg" alt="Profile Picture">
+        <h2>SILAMBARASAN.S</h2>
+        <p> Web Developer |UI UX DESIGNER</p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/silambarasan-selvam-556b89277/" target="_blank" class="linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/silambucse26" target="_blank" class="github">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/silambu__001_" target="_blank" class="instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:silambarasancse8@gmail.com" class="email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            
+        </div>
+        <H1>SKILLS</H1>
+        <div class="skills">
+            <div class="skill">
+                <p class="skill-name">HTML & CSS</p>
+            </div>
+            <div class="skill">
+                <p class="skill-name">JavaScript</p>
+            </div>
+            <div class="skill">
+                <p class="skill-name">React</p>
+            </div>
+            <div class="skill">
+                <p class="skill-name">Node.js</p>
+            </div>
+            <div class="skill">
+                <p class="skill-name">UI UX DESIGNER</p>
+            </div>
+            <div class="skill">
+                <p class="skill-name">MONGODB</p>
+            </div>
+        </div>
+<H1>PROJECTS</H1>
+        <div class="projects">
+            <div class="project-card">LOG IN PAGE</div>
+            <div class="project-card">FOOD DELIVERY</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
